@@ -1,0 +1,281 @@
+# vsim -voptargs=""+acc"" work.ahb_top_tb 
+# Start time: 16:46:46 on Jul 03,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.ahb_top_tb(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_if(fast__2)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.AHP_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_decoder(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.AHP_slave1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.AHP_slave2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.AHP_slave3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.AHP_slave4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Digital_Electronics/AMPA_AHP/rtl/AHP_TOP.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Digital_Electronics/AMPA_AHP/rtl/AHP_TOP.mpf).  File can not be renamed.
+# End time: 16:47:02 on Jul 03,2026, Elapsed time: 0:00:16
+# Errors: 2, Warnings: 1
+# vsim -voptargs=""+acc"" work.ahb_top_tb 
+# Start time: 16:47:03 on Jul 03,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.ahb_top_tb(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_if(fast__2)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.AHP_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_decoder(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.AHP_slave1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.AHP_slave2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.AHP_slave3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.AHP_slave4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# [45000] Reset released
+# 
+# ===== Test 1 : Write/Read Slave 1 =====
+# [45000] SINGLE WRITE  addr=0x00000000  data=0x12345678
+# [75000] SINGLE WRITE  done
+# [105000] PASS  slave1 mem[0] (addr 0x00000000) = 0x12345678
+# [105000] SINGLE READ addr=0x00000000
+# [145000] PASS READ addr=0x00000000 data=0x12345678
+# 
+# ===== Test 2 : Write/Read Slave 4 with wait state =====
+# [175000] SINGLE WRITE  addr=0x00000c00  data=0xcafebabe
+# [205000] SINGLE WRITE  done
+# [235000] PASS  slave4 mem[0] (addr 0x00000c00) = 0xcafebabe
+# [265000] SINGLE READ addr=0x00000c00
+# [305000] PASS READ addr=0x00000c00 data=0xcafebabe
+# 
+# ===== Test 3 : INCR4 Write/Read Slave 1 =====
+# [335000] INCR4 WRITE   start_addr=0x00000010
+# [405000] INCR4 WRITE   done
+# [465000] PASS  slave1 mem[4] (addr 0x00000010) = 0xaaaa0001
+# [465000] PASS  slave1 mem[5] (addr 0x00000014) = 0xbbbb0002
+# [465000] PASS  slave1 mem[6] (addr 0x00000018) = 0xcccc0003
+# [465000] PASS  slave1 mem[7] (addr 0x0000001c) = 0xdddd0004
+# [465000] INCR4 READ start_addr=0x00000010
+# [535000] TEST PASSED  INCR4 READ start_addr=0x00000010
+# 
+# ===== Test 4 : INCR4 Write/Read Slave 2 =====
+# [565000] INCR4 WRITE   start_addr=0x00000410
+# [635000] INCR4 WRITE   done
+# [695000] PASS  slave2 mem[4] (addr 0x00000410) = 0x11110001
+# [695000] PASS  slave2 mem[5] (addr 0x00000414) = 0x22220002
+# [695000] PASS  slave2 mem[6] (addr 0x00000418) = 0x33330003
+# [695000] PASS  slave2 mem[7] (addr 0x0000041c) = 0x44440004
+# [695000] INCR4 READ start_addr=0x00000410
+# [765000] TEST PASSED  INCR4 READ start_addr=0x00000410
+# 
+# ===== Test 5 : INCR4 Write/Read Slave 3 =====
+# [795000] INCR4 WRITE   start_addr=0x00000810
+# [865000] INCR4 WRITE   done
+# [925000] PASS  slave3 mem[4] (addr 0x00000810) = 0x55550001
+# [925000] PASS  slave3 mem[5] (addr 0x00000814) = 0x66660002
+# [925000] PASS  slave3 mem[6] (addr 0x00000818) = 0x77770003
+# [925000] PASS  slave3 mem[7] (addr 0x0000081c) = 0x88880004
+# [925000] INCR4 READ start_addr=0x00000810
+# [995000] TEST PASSED  INCR4 READ start_addr=0x00000810
+# 
+# ===== Test 6 : INCR4 Write/Read Slave 4 =====
+# [1025000] INCR4 WRITE   start_addr=0x00000c10
+# [1095000] INCR4 WRITE   done
+# [1155000] PASS  slave4 mem[4] (addr 0x00000c10) = 0x99990001
+# [1155000] PASS  slave4 mem[5] (addr 0x00000c14) = 0xaaaa0002
+# [1155000] PASS  slave4 mem[6] (addr 0x00000c18) = 0xbbbb0003
+# [1155000] PASS  slave4 mem[7] (addr 0x00000c1c) = 0xcccc0004
+# [1155000] INCR4 READ start_addr=0x00000c10
+# [1225000] TEST PASSED  INCR4 READ start_addr=0x00000c10
+# 
+# ===== Test 7 : WRAP4 Write/Read Slave 1 (unaligned, wraps) =====
+# [1255000] WRAP4 WRITE   start_addr=0x00000004
+# [1325000] WRAP4 WRITE   done
+# [1385000] PASS  slave1 mem[1] (addr 0x00000004) = 0x11110001
+# [1385000] PASS  slave1 mem[2] (addr 0x00000008) = 0x22220002
+# [1385000] PASS  slave1 mem[3] (addr 0x0000000c) = 0x33330003
+# [1385000] PASS  slave1 mem[0] (addr 0x00000000) = 0x44440004
+# [1385000] WRAP4 READ start_addr=0x00000004
+# [1455000] TEST PASSED  WRAP4 READ start_addr=0x00000004
+# 
+# ===== Test 8 : WRAP8 Write/Read Slave 2 (unaligned, wraps) =====
+# [1485000] WRAP8 WRITE   start_addr=0x00000410
+# [1595000] WRAP8 WRITE   done
+# [1715000] PASS  slave2 mem[4] (addr 0x00000410) = 0xa0010001
+# [1715000] PASS  slave2 mem[5] (addr 0x00000414) = 0xa0020002
+# [1715000] PASS  slave2 mem[6] (addr 0x00000418) = 0xa0030003
+# [1715000] PASS  slave2 mem[7] (addr 0x0000041c) = 0xa0040004
+# [1715000] PASS  slave2 mem[0] (addr 0x00000400) = 0xa0050005
+# [1715000] PASS  slave2 mem[1] (addr 0x00000404) = 0xa0060006
+# [1715000] PASS  slave2 mem[2] (addr 0x00000408) = 0xa0070007
+# [1715000] PASS  slave2 mem[3] (addr 0x0000040c) = 0xa0080008
+# [1715000] WRAP8 READ start_addr=0x00000410
+# [1825000] TEST PASSED  WRAP8 READ start_addr=0x00000410
+# 
+# ===== Test 9 : WRAP16 Write/Read Slave 3 (unaligned, wraps) =====
+# [1855000] WRAP16 WRITE   start_addr=0x00000818
+# [2045000] WRAP16 WRITE   done
+# [2245000] PASS  slave3 mem[6] (addr 0x00000818) = 0xb0010001
+# [2245000] PASS  slave3 mem[7] (addr 0x0000081c) = 0xb0020002
+# [2245000] PASS  slave3 mem[8] (addr 0x00000820) = 0xb0030003
+# [2245000] PASS  slave3 mem[9] (addr 0x00000824) = 0xb0040004
+# [2245000] PASS  slave3 mem[10] (addr 0x00000828) = 0xb0050005
+# [2245000] PASS  slave3 mem[11] (addr 0x0000082c) = 0xb0060006
+# [2245000] PASS  slave3 mem[12] (addr 0x00000830) = 0xb0070007
+# [2245000] PASS  slave3 mem[13] (addr 0x00000834) = 0xb0080008
+# [2245000] PASS  slave3 mem[14] (addr 0x00000838) = 0xb0090009
+# [2245000] PASS  slave3 mem[15] (addr 0x0000083c) = 0xb0100010
+# [2245000] PASS  slave3 mem[0] (addr 0x00000800) = 0xb0110011
+# [2245000] PASS  slave3 mem[1] (addr 0x00000804) = 0xb0120012
+# [2245000] PASS  slave3 mem[2] (addr 0x00000808) = 0xb0130013
+# [2245000] PASS  slave3 mem[3] (addr 0x0000080c) = 0xb0140014
+# [2245000] PASS  slave3 mem[4] (addr 0x00000810) = 0xb0150015
+# [2245000] PASS  slave3 mem[5] (addr 0x00000814) = 0xb0160016
+# [2245000] WRAP16 READ start_addr=0x00000818
+# [2435000] TEST PASSED  WRAP16 READ start_addr=0x00000818
+# 
+# ===== Test 10 : WRAP16 Write/Read Slave 4 (unaligned, wraps) =====
+# [2465000] WRAP16 WRITE   start_addr=0x00000c28
+# [2655000] WRAP16 WRITE   done
+# [2855000] PASS  slave4 mem[10] (addr 0x00000c28) = 0xc0010001
+# [2855000] PASS  slave4 mem[11] (addr 0x00000c2c) = 0xc0020002
+# [2855000] PASS  slave4 mem[12] (addr 0x00000c30) = 0xc0030003
+# [2855000] PASS  slave4 mem[13] (addr 0x00000c34) = 0xc0040004
+# [2855000] PASS  slave4 mem[14] (addr 0x00000c38) = 0xc0050005
+# [2855000] PASS  slave4 mem[15] (addr 0x00000c3c) = 0xc0060006
+# [2855000] PASS  slave4 mem[0] (addr 0x00000c00) = 0xc0070007
+# [2855000] PASS  slave4 mem[1] (addr 0x00000c04) = 0xc0080008
+# [2855000] PASS  slave4 mem[2] (addr 0x00000c08) = 0xc0090009
+# [2855000] PASS  slave4 mem[3] (addr 0x00000c0c) = 0xc0100010
+# [2855000] PASS  slave4 mem[4] (addr 0x00000c10) = 0xc0110011
+# [2855000] PASS  slave4 mem[5] (addr 0x00000c14) = 0xc0120012
+# [2855000] PASS  slave4 mem[6] (addr 0x00000c18) = 0xc0130013
+# [2855000] PASS  slave4 mem[7] (addr 0x00000c1c) = 0xc0140014
+# [2855000] PASS  slave4 mem[8] (addr 0x00000c20) = 0xc0150015
+# [2855000] PASS  slave4 mem[9] (addr 0x00000c24) = 0xc0160016
+# [2855000] WRAP16 READ start_addr=0x00000c28
+# [3045000] TEST PASSED  WRAP16 READ start_addr=0x00000c28
+# 
+# ===== Test 11 : INCR8 Write/Read Slave 2 =====
+# [3075000] INCR8 WRITE   start_addr=0x00000440
+# [3185000] INCR8 WRITE   done
+# [3305000] PASS  slave2 mem[16] (addr 0x00000440) = 0xd0010001
+# [3305000] PASS  slave2 mem[17] (addr 0x00000444) = 0xd0020002
+# [3305000] PASS  slave2 mem[18] (addr 0x00000448) = 0xd0030003
+# [3305000] PASS  slave2 mem[19] (addr 0x0000044c) = 0xd0040004
+# [3305000] PASS  slave2 mem[20] (addr 0x00000450) = 0xd0050005
+# [3305000] PASS  slave2 mem[21] (addr 0x00000454) = 0xd0060006
+# [3305000] PASS  slave2 mem[22] (addr 0x00000458) = 0xd0070007
+# [3305000] PASS  slave2 mem[23] (addr 0x0000045c) = 0xd0080008
+# [3305000] INCR8 READ start_addr=0x00000440
+# [3415000] TEST PASSED  INCR8 READ start_addr=0x00000440
+# 
+# ===== Test 12 : INCR8 Write/Read Slave 3 =====
+# [3445000] INCR8 WRITE   start_addr=0x00000850
+# [3555000] INCR8 WRITE   done
+# [3675000] PASS  slave3 mem[20] (addr 0x00000850) = 0xe0010001
+# [3675000] PASS  slave3 mem[21] (addr 0x00000854) = 0xe0020002
+# [3675000] PASS  slave3 mem[22] (addr 0x00000858) = 0xe0030003
+# [3675000] PASS  slave3 mem[23] (addr 0x0000085c) = 0xe0040004
+# [3675000] PASS  slave3 mem[24] (addr 0x00000860) = 0xe0050005
+# [3675000] PASS  slave3 mem[25] (addr 0x00000864) = 0xe0060006
+# [3675000] PASS  slave3 mem[26] (addr 0x00000868) = 0xe0070007
+# [3675000] PASS  slave3 mem[27] (addr 0x0000086c) = 0xe0080008
+# [3675000] INCR8 READ start_addr=0x00000850
+# [3785000] TEST PASSED  INCR8 READ start_addr=0x00000850
+# 
+# ===== Test 13 : INCR16 Write/Read Slave 2 =====
+# [3815000] INCR16 WRITE   start_addr=0x00000480
+# [4005000] INCR16 WRITE   done
+# [4205000] PASS  slave2 mem[32] (addr 0x00000480) = 0xf0010001
+# [4205000] PASS  slave2 mem[33] (addr 0x00000484) = 0xf0020002
+# [4205000] PASS  slave2 mem[34] (addr 0x00000488) = 0xf0030003
+# [4205000] PASS  slave2 mem[35] (addr 0x0000048c) = 0xf0040004
+# [4205000] PASS  slave2 mem[36] (addr 0x00000490) = 0xf0050005
+# [4205000] PASS  slave2 mem[37] (addr 0x00000494) = 0xf0060006
+# [4205000] PASS  slave2 mem[38] (addr 0x00000498) = 0xf0070007
+# [4205000] PASS  slave2 mem[39] (addr 0x0000049c) = 0xf0080008
+# [4205000] PASS  slave2 mem[40] (addr 0x000004a0) = 0xf0090009
+# [4205000] PASS  slave2 mem[41] (addr 0x000004a4) = 0xf0100010
+# [4205000] PASS  slave2 mem[42] (addr 0x000004a8) = 0xf0110011
+# [4205000] PASS  slave2 mem[43] (addr 0x000004ac) = 0xf0120012
+# [4205000] PASS  slave2 mem[44] (addr 0x000004b0) = 0xf0130013
+# [4205000] PASS  slave2 mem[45] (addr 0x000004b4) = 0xf0140014
+# [4205000] PASS  slave2 mem[46] (addr 0x000004b8) = 0xf0150015
+# [4205000] PASS  slave2 mem[47] (addr 0x000004bc) = 0xf0160016
+# [4205000] INCR16 READ start_addr=0x00000480
+# [4395000] TEST PASSED  INCR16 READ start_addr=0x00000480
+# 
+# ===== Test 14 : INCR16 Write/Read Slave 3 =====
+# [4425000] INCR16 WRITE   start_addr=0x00000880
+# [4615000] INCR16 WRITE   done
+# [4815000] PASS  slave3 mem[32] (addr 0x00000880) = 0x1a010001
+# [4815000] PASS  slave3 mem[33] (addr 0x00000884) = 0x1a020002
+# [4815000] PASS  slave3 mem[34] (addr 0x00000888) = 0x1a030003
+# [4815000] PASS  slave3 mem[35] (addr 0x0000088c) = 0x1a040004
+# [4815000] PASS  slave3 mem[36] (addr 0x00000890) = 0x1a050005
+# [4815000] PASS  slave3 mem[37] (addr 0x00000894) = 0x1a060006
+# [4815000] PASS  slave3 mem[38] (addr 0x00000898) = 0x1a070007
+# [4815000] PASS  slave3 mem[39] (addr 0x0000089c) = 0x1a080008
+# [4815000] PASS  slave3 mem[40] (addr 0x000008a0) = 0x1a090009
+# [4815000] PASS  slave3 mem[41] (addr 0x000008a4) = 0x1a100010
+# [4815000] PASS  slave3 mem[42] (addr 0x000008a8) = 0x1a110011
+# [4815000] PASS  slave3 mem[43] (addr 0x000008ac) = 0x1a120012
+# [4815000] PASS  slave3 mem[44] (addr 0x000008b0) = 0x1a130013
+# [4815000] PASS  slave3 mem[45] (addr 0x000008b4) = 0x1a140014
+# [4815000] PASS  slave3 mem[46] (addr 0x000008b8) = 0x1a150015
+# [4815000] PASS  slave3 mem[47] (addr 0x000008bc) = 0x1a160016
+# [4815000] INCR16 READ start_addr=0x00000880
+# [5005000] TEST PASSED  INCR16 READ start_addr=0x00000880
+# 
+# ===== Test 15 : INCR4 Write/Read Slave 1 with a delay =====
+# [5005000] INCR4 WRITE   start_addr=0x00000010
+# [5075000] INCR4 WRITE   done
+# [5135000] INCR4 READ start_addr=0x00000010
+# [5205000] TEST PASSED  INCR4 READ start_addr=0x00000010
+# 
+# ===== Test 16 : INCR8 Write/Read Slave 3 with a delay =====
+# [5205000] INCR8 WRITE   start_addr=0x00000850
+# [5315000] INCR8 WRITE   done
+# [5465000] INCR8 READ start_addr=0x00000850
+# [5575000] TEST PASSED  INCR8 READ start_addr=0x00000850
+# 
+# ===== Test 17 : INCR16 Write/Read Slave 3 with delay=====
+# [5575000] INCR16 WRITE   start_addr=0x00000880
+# [5765000] INCR16 WRITE   done
+# [5995000] INCR16 READ start_addr=0x00000880
+# [6185000] TEST PASSED  INCR16 READ start_addr=0x00000880
+# 
+# ===== Test 18 : WRAP4 Write/Read Slave 1 with a delay  =====
+# [6185000] WRAP4 WRITE   start_addr=0x00000004
+# [6255000] WRAP4 WRITE   done
+# [6315000] WRAP4 READ start_addr=0x00000004
+# [6385000] TEST PASSED  WRAP4 READ start_addr=0x00000004
+# 
+# ===== Test 19 : WRAP8 Write/Read Slave 2 with delay  =====
+# [6385000] WRAP8 WRITE   start_addr=0x00000410
+# [6495000] WRAP8 WRITE   done
+# [6635000] WRAP8 READ start_addr=0x00000410
+# [6745000] TEST PASSED  WRAP8 READ start_addr=0x00000410
+# [6845000] All tests complete
+# ** Note: $stop    : D:/Digital_Electronics/AMPA_AHP/rtl/top_TB.sv(1146)
+#    Time: 6845 ns  Iteration: 1  Instance: /ahb_top_tb
+# Break in Module ahb_top_tb at D:/Digital_Electronics/AMPA_AHP/rtl/top_TB.sv line 1146
